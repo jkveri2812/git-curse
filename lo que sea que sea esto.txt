@@ -1,0 +1,40 @@
+.  
+
+|-- COMMIT_EDITMSG: Contiene la descripción del último commit, existe para fines informativos.
+
+|-- FETCH_HEAD: Los SHAs de todas las ramas que fueron actualizadas por el último git fetch.
+
+|-- HEAD: En la mayoría de los casos éste es probablemente refs/heads/master.
+
+|-- ORIG_HEAD: Durante una integración, este es el SHA de la rama en la que se está realizando la operación.
+
+|-- branches: Almacena los archivos en in branches/ y da un nombre al comando en lugar del argumento del repositorio.
+
+|-- config:   Es el archivo principal de configuración. Mantiene las opciones de especificación, tales como remotos, configuraciones push, tracking branches y más.
+
+|-- description: Muestra cuando hayas visto tu repositorio en la lista de todos los repositorios versionados, si utilizas gitweb o ejecutas git instaweb.
+
+|-- hooks:  Directorio que contiene los scripts shell que se invocan después de los correspondientes comandos Git.
+
+|-- applypatch-msg
+|-- commit-msg
+|-- post-commit
+|-- post-receive
+|-- post-update
+|-- pre-applypatch
+|-- pre-commit
+|-- pre-rebase
+|-- prepare-commit-msg
+`-- update
+|-- index: Información acerca de los archivos que serán incluidos en el próximo commit.
+|-- info: Contiene el archivo exclude , este archivo puede ignorar archivos del proyecto.
+|   `-- exclude
+|-- logs: Mantiene registros de los cambios hechos.
+|-- HEAD
+`-- refs
+|-- objects: El depósito interno de objetos, indexados por SHAs.
+`-- refs: El depósito interno de objetos, indexados por SHAs.
+|-- heads
+|-- remotes
+|-- stash
+`-- tags
