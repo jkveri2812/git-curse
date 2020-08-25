@@ -1,0 +1,16 @@
+Para push & pull
+
+Push        	                                    CTRL+SHIFT+P
+Pull	                                            CTRL+ALT+P
+
+Para cambios
+Commit	                                    CTRL+#
+
+Revert	                                            CTRL+ALT+R
+
+Compare with previous	    CTRL_ALT+C
+
+
+
+Para branches
+Branch	                                    CTRL+ALT+B
