@@ -1,0 +1,92 @@
+Crear un repositorio nuevo
+git init
+
+Realizar checkout a un repositorio
+Crea una copia local del repositorio ejecutando:
+
+git clone /path/to/repository
+
+Si utilizas un servidor remoto, ejecuta:
+
+git clone username@host:/path/to/repository
+
+Flujo de Trabajo 
+Tu repositorio local esta compuesto por tres "ramas" administrados por Git.
+
+1. Directorio de trabajo: que contiene los archivos.
+
+2. Index: actúa como una zona intermedia.
+
+3. Head: que apunta al último commit realizado.
+
+Add
+Registrar cambios que son añadidos al Index.
+
+git add <filename>
+git add .
+
+Commit
+git commit -m "Commit message"
+
+El archivo se encuentra incluido en el HEAD, pero no está en tu repositorio remoto.
+
+Envío de cambios
+git push origin master
+
+Envia los cambios de tu copia local a tu repositorio remoto.
+
+Si no tienes clonado el repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, ejecuta:
+
+git remote add origin <server>
+
+Ramas
+Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama master es la rama "por defecto" cuando creas un repositorio. Crea nuevas ramas durante el desarrollo y fusiónalas a la rama principal cuando termines.
+
+Para crear una rama utiliza:
+
+git checkout -b nombre_rama
+
+Para retornar a la rama master ejecuta:
+
+git checkout master
+
+Para borrar la rama que haz creado utiliza:
+
+git branch -d nombre_rama
+
+Para compartir la rama en un repositorio remoto, ejecuta:
+
+git push origin <branch>
+
+Actualiza
+Para actualizar tu repositorio local al commit más nuevo, utiliza:
+
+git pull
+
+Fusión 
+Para fusionar otra rama a tu rama activa, ejecuta: 
+
+git merge <branch>
+
+En caso de que existan conflictos, luego de resolverlos puedes marcarlos como fusionados utilizando: 
+
+git add <filename>
+
+Etiquetas
+Crea etiquetas para cada nueva versión pública del software, por ejemplo para 1.0.0 ejecuta:
+
+git tag 1.0.0 1b2e1d63ff
+
+1b2e1d63ff, se refiere a los 10 caracteres del commit id de tu etiqueta. Puedes consultar el commit id, ejecutando: 
+
+git log
+
+Reemplaza cambios locales
+git checkout -- <filename>
+
+Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD.
+
+Recuperar la última versión del servidor y agregarla a tu copia local, utiliza:
+
+git fetch origin
+git reset --hard origin/master
